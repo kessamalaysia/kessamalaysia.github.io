@@ -15,6 +15,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 html{
@@ -87,7 +90,6 @@ font-weight:600;
 line-height:1.15;
 margin-bottom:18px;
 letter-spacing:-0.6px;
-text-shadow:0 4px 16px rgba(0,0,0,0.35);
 }
 
 .hero p{
@@ -103,13 +105,11 @@ padding:15px 32px;
 text-decoration:none;
 border-radius:6px;
 font-weight:500;
-box-shadow:0 6px 18px rgba(0,0,0,0.3);
-transition:0.25s;
+transition:0.3s;
 }
 
 .btn:hover{
 background:#cc0000;
-transform:translateY(-2px);
 }
 
 /* SECTION */
@@ -132,16 +132,16 @@ max-width:1100px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+gap:35px;
 }
 
 .service-card{
 background:white;
-padding:35px;
-border-radius:8px;
+padding:40px 30px;
+border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
-transition:0.3s;
 text-align:center;
+transition:0.3s;
 }
 
 .service-card:hover{
@@ -150,9 +150,30 @@ box-shadow:0 14px 30px rgba(0,0,0,0.12);
 }
 
 .service-icon{
-font-size:36px;
-margin-bottom:15px;
+width:70px;
+height:70px;
+background:#ffe5e5;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+margin-bottom:20px;
+}
+
+.service-icon i{
+font-size:30px;
 color:#e60000;
+}
+
+.service-card h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+.service-card p{
+font-size:15px;
+color:#666;
 }
 
 /* ABOUT */
@@ -231,7 +252,6 @@ padding:15px;
 font-size:16px;
 border-radius:4px;
 cursor:pointer;
-font-weight:500;
 }
 
 .contact-form button:hover{
@@ -284,7 +304,7 @@ font-size:14px;
 }
 
 .hero{
-height:430px;
+height:420px;
 padding:25px;
 }
 
@@ -348,19 +368,25 @@ height:50px;
 <div class="services">
 
 <div class="service-card">
-<div class="service-icon">⚙️</div>
+<div class="service-icon">
+<i class="fa-solid fa-gears"></i>
+</div>
 <h3>Biomedical Equipment Service</h3>
 <p>Professional repair and servicing of biomedical equipment.</p>
 </div>
 
 <div class="service-card">
-<div class="service-icon">🛠</div>
+<div class="service-icon">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+</div>
 <h3>Preventive Maintenance</h3>
 <p>Scheduled preventive maintenance to ensure equipment reliability.</p>
 </div>
 
 <div class="service-card">
-<div class="service-icon">🔧</div>
+<div class="service-icon">
+<i class="fa-solid fa-wrench"></i>
+</div>
 <h3>Technical Support</h3>
 <p>Engineering troubleshooting and technical consultation.</p>
 </div>
@@ -371,7 +397,7 @@ height:50px;
 
 <div class="section about" id="about">
 
-<h2 class="section-title">About Kessa Integrated Solution. Beyond Engineering.</h2>
+<h2 class="section-title">About Kessa Integrated Solution</h2>
 
 <div class="about-container">
 
@@ -388,8 +414,6 @@ height:50px;
 <p>As part of its continuous growth and service diversification, the company has expanded its capabilities into electrical engineering, power infrastructure services, solar photovoltaic (PV) system installation, and electric vehicle (EV) charging station installation.</p>
 
 <p>In addition, Kessa Integrated Solution also provides building cleaning and facility maintenance services, supporting organizations in maintaining safe, clean, and well-managed operational environments.</p>
-
-<p>Driven by technical expertise and industry experience, Kessa Integrated Solution aims to deliver reliable, efficient, and professional engineering and facility support services to meet the evolving needs of modern infrastructure.</p>
 
 </div>
 
