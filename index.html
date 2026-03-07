@@ -1,53 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kessa Integrated Solution</title>
 
 <style>
 
-body{
-font-family: Arial;
+*{
+box-sizing:border-box;
 margin:0;
-background:#f4f4f4;
+padding:0;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 header{
-background:#0a2a66;
-color:white;
-padding:20px;
-text-align:center;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
 }
 
-nav{
-background:#333;
-padding:10px;
-text-align:center;
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#0a2a66;
 }
 
 nav a{
-color:white;
-margin:15px;
+margin-left:25px;
 text-decoration:none;
-font-weight:bold;
+color:#333;
+font-weight:600;
 }
 
-.container{
-padding:40px;
+.hero{
+height:520px;
+background:url("https://images.unsplash.com/photo-1581092335397-9583eb92d232") center/cover;
+display:flex;
+align-items:center;
+padding-left:100px;
+color:white;
 }
 
-.service{
-background:white;
-padding:20px;
-margin:15px 0;
-border-radius:5px;
+.hero h1{
+font-size:52px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#0a2a66;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:4px;
+}
+
+.section{
+padding:80px 100px;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:#f4f4f4;
+padding:30px;
+border-radius:6px;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.about{
+background:#fafafa;
 }
 
 footer{
-background:#0a2a66;
+background:#111;
 color:white;
 text-align:center;
-padding:15px;
-margin-top:40px;
+padding:25px;
 }
 
 .whatsapp{
@@ -56,9 +111,10 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:15px 18px;
 border-radius:50px;
 text-decoration:none;
+font-weight:bold;
 }
 
 </style>
@@ -68,42 +124,85 @@ text-decoration:none;
 <body>
 
 <header>
-<h1>Kessa Integrated Solution</h1>
-<p>Engineering & Technical Services</p>
-</header>
+
+<div class="logo">
+Kessa
+</div>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#">Services</a>
+<a href="#">About</a>
 <a href="#">Contact</a>
+
 </nav>
 
-<div class="container">
+</header>
 
-<h2>Our Services</h2>
+<div class="hero">
 
-<div class="service">
-Biomedical Equipment Service
+<div>
+
+<h1>Kessa Integrated Solution</h1>
+
+<p>Engineering & Biomedical Equipment Services</p>
+
+<a class="btn" href="#">Contact Us</a>
+
 </div>
 
-<div class="service">
-Preventive Maintenance
 </div>
 
-<div class="service">
-Technical Support
+<div class="section">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="service-card">
+<h3>Biomedical Equipment Service</h3>
+<p>Maintenance and repair of biomedical equipment.</p>
 </div>
 
-<h2>Contact</h2>
+<div class="service-card">
+<h3>Preventive Maintenance</h3>
+<p>Scheduled maintenance for hospital equipment.</p>
+</div>
+
+<div class="service-card">
+<h3>Technical Support</h3>
+<p>Engineering and troubleshooting services.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="section about">
+
+<h2 class="section-title">About Us</h2>
+
+<p>Kessa Integrated Solution provides engineering and biomedical equipment services with focus on reliability, safety and quality maintenance.</p>
+
+</div>
+
+<div class="section">
+
+<h2 class="section-title">Contact</h2>
+
 <p>Email: info@kessa.com</p>
 
 </div>
 
 <footer>
+
 © 2026 Kessa Integrated Solution
+
 </footer>
 
 <a class="whatsapp" href="https://wa.me/">WhatsApp</a>
 
 </body>
+
 </html>
