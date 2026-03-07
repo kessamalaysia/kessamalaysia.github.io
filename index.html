@@ -7,60 +7,15 @@
 
 <title>Kessa Integrated Solution</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 <style>
-/* MOBILE RESPONSIVE */
 
-@media (max-width:768px){
-
-header{
-flex-direction:column;
-align-items:flex-start;
-padding:15px 20px;
-}
-
-nav{
-margin-top:10px;
-}
-
-nav a{
-margin-left:0;
-margin-right:15px;
-font-size:14px;
-}
-
-.hero{
-height:420px;
-padding-left:25px;
-padding-right:25px;
-text-align:left;
-}
-
-.hero h1{
-font-size:36px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.section{
-padding:50px 25px;
-}
-
-.services{
-grid-template-columns:1fr;
-}
-
-.logo img{
-height:50px;
-}
-
-}
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Calibri, Arial, sans-serif;
+font-family:'Roboto', sans-serif;
 }
 
 body{
@@ -83,13 +38,13 @@ z-index:1000;
 }
 
 .logo img{
-height:55px;
+height:60px;
 }
 
 nav a{
 margin-left:30px;
 text-decoration:none;
-font-weight:600;
+font-weight:500;
 color:#333;
 font-size:16px;
 }
@@ -113,6 +68,7 @@ color:white;
 .hero h1{
 font-size:54px;
 margin-bottom:10px;
+font-weight:700;
 }
 
 .hero p{
@@ -126,7 +82,7 @@ color:white;
 padding:14px 28px;
 text-decoration:none;
 border-radius:4px;
-font-weight:bold;
+font-weight:500;
 }
 
 /* SECTION */
@@ -138,6 +94,7 @@ padding:80px 100px;
 .section-title{
 font-size:34px;
 margin-bottom:35px;
+text-align:center;
 }
 
 /* SERVICES */
@@ -178,6 +135,7 @@ font-size:17px;
 .contact p{
 margin-bottom:10px;
 font-size:16px;
+text-align:center;
 }
 
 /* FOOTER */
@@ -202,6 +160,54 @@ border-radius:50px;
 text-decoration:none;
 font-weight:bold;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+align-items:flex-start;
+padding:15px 20px;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+margin-left:0;
+margin-right:15px;
+font-size:14px;
+}
+
+.hero{
+height:420px;
+padding-left:25px;
+padding-right:25px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section{
+padding:50px 25px;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.logo img{
+height:50px;
+}
+
 }
 
 </style>
@@ -268,9 +274,12 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 
 <h2 class="section-title">About Kessa</h2>
 
-<p>
+<p style="max-width:700px;margin:auto;text-align:center">
+
 Kessa Integrated Solution provides engineering and biomedical equipment services focused on reliability, safety and quality maintenance.
+
 We support healthcare facilities and technical environments with professional service and maintenance expertise.
+
 </p>
 
 </div>
