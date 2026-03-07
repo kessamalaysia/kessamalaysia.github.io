@@ -159,23 +159,38 @@ color:#e60000;
 background:#f8f8f8;
 }
 
-.about-text{
-max-width:850px;
+.about-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+max-width:1100px;
 margin:auto;
-text-align:center;
-font-size:17px;
-line-height:1.8;
-color:#444;
 margin-bottom:60px;
+align-items:center;
+}
+
+.about-text{
+font-size:17px;
+line-height:1.9;
+text-align:justify;
+color:#444;
 }
 
 .about-text p{
-margin-bottom:20px;
+margin-bottom:18px;
 }
+
+.about-image img{
+width:100%;
+border-radius:8px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* CAPABILITY IMAGES */
 
 .about-gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 max-width:1100px;
 margin:auto;
@@ -186,13 +201,18 @@ width:100%;
 height:220px;
 object-fit:cover;
 border-radius:8px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.about-card img:hover{
+transform:scale(1.05);
 }
 
 .about-card h4{
+text-align:center;
 margin-top:12px;
 font-weight:500;
-text-align:center;
 }
 
 /* CONTACT */
@@ -279,8 +299,7 @@ font-size:14px;
 
 .hero{
 height:430px;
-padding-left:25px;
-padding-right:25px;
+padding:25px;
 }
 
 .hero h1{
@@ -296,6 +315,10 @@ padding:60px 25px;
 }
 
 .services{
+grid-template-columns:1fr;
+}
+
+.about-container{
 grid-template-columns:1fr;
 }
 
@@ -372,28 +395,22 @@ height:50px;
 
 <h2 class="section-title">About Kessa</h2>
 
+<div class="about-container">
+
 <div class="about-text">
 
-<p>
-Kessa Integrated Solution is an integrated engineering and facility service provider built on more than a decade of industry experience in facility management and biomedical engineering services. The company is supported by professionals with extensive technical exposure across both government institutions and private sector organizations, particularly within healthcare facilities and critical infrastructure environments.
-</p>
+<p>Kessa Integrated Solution is an integrated engineering and facility service provider built on more than a decade of industry experience in facility management and biomedical engineering services.</p>
 
-<p>
-With strong expertise in biomedical equipment management, planned preventive maintenance programs, technical support, and engineering services, Kessa Integrated Solution has developed a solid track record in supporting the operational reliability of medical equipment and facility systems. Our biomedical services are conducted in accordance with ISO 13485 quality management standards, SIRIM standards, and the guidelines established by the Malaysian Medical Device Authority (MDA).
-</p>
+<p>The company is supported by professionals with extensive technical exposure across government institutions and private sector organizations, particularly within healthcare facilities and critical infrastructure environments.</p>
 
-<p>
-As part of its continuous growth and service diversification, the company has expanded its capabilities into electrical engineering, power infrastructure services, solar photovoltaic (PV) system installation, and electric vehicle (EV) charging station installation.
-</p>
+<p>With strong expertise in biomedical equipment management, preventive maintenance programs, and engineering services, Kessa Integrated Solution ensures operational reliability and long-term equipment performance.</p>
 
-<p>
-In addition, Kessa Integrated Solution also provides building cleaning and facility maintenance services, supporting organizations in maintaining safe, clean, and well-managed operational environments.
-</p>
+</div>
 
-<p>
-Driven by technical expertise and industry experience, Kessa Integrated Solution aims to deliver reliable, efficient, and professional engineering and facility support services to meet the evolving needs of modern infrastructure.
-</p>
-  
+<div class="about-image">
+<img src="biomed.png">
+</div>
+
 </div>
 
 <div class="about-gallery">
