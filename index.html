@@ -130,12 +130,41 @@ line-height:1.7;
 font-size:17px;
 }
 
-/* CONTACT */
+/* CONTACT FORM */
 
-.contact p{
-margin-bottom:10px;
+.contact-form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border:1px solid #ddd;
+border-radius:4px;
+font-size:15px;
+}
+
+.contact-form textarea{
+min-height:120px;
+resize:vertical;
+}
+
+.contact-form button{
+background:#e60000;
+color:white;
+border:none;
+padding:14px;
 font-size:16px;
-text-align:center;
+border-radius:4px;
+cursor:pointer;
+}
+
+.contact-form button:hover{
+background:#cc0000;
 }
 
 /* FOOTER */
@@ -162,7 +191,7 @@ font-weight:bold;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 @media (max-width:768px){
 
@@ -239,7 +268,7 @@ height:50px;
 
 <p>Engineering & Biomedical Equipment Services</p>
 
-<a class="btn" href="#">Contact Us</a>
+<a class="btn" href="#contact">Contact Us</a>
 
 </div>
 
@@ -284,12 +313,23 @@ We support healthcare facilities and technical environments with professional se
 
 </div>
 
-<div class="section contact">
+<div class="section" id="contact">
 
-<h2 class="section-title">Contact</h2>
+<h2 class="section-title">Contact Us</h2>
 
-<p>Email : info@kessa.com</p>
-<p>Phone : +60 XX XXX XXXX</p>
+<form action="https://formspree.io/f/yourID" method="POST" class="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="message" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
 
 </div>
 
