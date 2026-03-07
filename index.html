@@ -28,7 +28,7 @@ color:#333;
 line-height:1.6;
 }
 
-/* HEADER */
+/* NAVBAR */
 
 header{
 display:flex;
@@ -36,7 +36,7 @@ justify-content:space-between;
 align-items:center;
 padding:18px 80px;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
 z-index:1000;
@@ -47,7 +47,7 @@ height:60px;
 }
 
 nav a{
-margin-left:30px;
+margin-left:35px;
 text-decoration:none;
 font-weight:500;
 color:#333;
@@ -61,32 +61,31 @@ color:#e60000;
 /* HERO */
 
 .hero{
-height:520px;
-background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url("https://images.unsplash.com/photo-1581092335397-9583eb92d232") center/cover;
+height:560px;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc") center/cover;
 display:flex;
 align-items:center;
-padding-left:80px;
+padding-left:90px;
 color:white;
 }
 
 .hero-content{
-max-width:620px;
+max-width:640px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:54px;
 font-weight:600;
-letter-spacing:-0.4px;
 line-height:1.2;
 margin-bottom:16px;
+letter-spacing:-0.4px;
 }
 
 .hero p{
 font-size:20px;
-line-height:1.5;
 margin-bottom:28px;
-opacity:0.95;
+opacity:0.9;
 }
 
 .btn{
@@ -96,18 +95,23 @@ padding:14px 28px;
 text-decoration:none;
 border-radius:4px;
 font-weight:500;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#cc0000;
 }
 
 /* SECTION */
 
 .section{
-padding:80px 100px;
+padding:90px 120px;
 }
 
 .section-title{
-font-size:34px;
+font-size:36px;
 font-weight:500;
-margin-bottom:35px;
+margin-bottom:45px;
 text-align:center;
 }
 
@@ -116,62 +120,74 @@ text-align:center;
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .service-card{
-background:#f6f6f6;
-padding:30px;
-border-radius:6px;
+background:white;
+padding:35px;
+border-radius:8px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 transition:0.3s;
+text-align:center;
 }
 
 .service-card:hover{
-transform:translateY(-5px);
-box-shadow:0 12px 20px rgba(0,0,0,0.1);
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.12);
+}
+
+.service-icon{
+font-size:36px;
+margin-bottom:15px;
+color:#e60000;
 }
 
 .service-card h3{
-margin-bottom:10px;
-color:#e60000;
+margin-bottom:12px;
 font-weight:500;
 }
 
 /* ABOUT */
 
 .about{
-background:#fafafa;
+background:#f8f8f8;
+}
+
+.about-text{
+max-width:720px;
+margin:auto;
+text-align:center;
 font-size:17px;
 }
 
-/* CONTACT FORM */
+/* CONTACT */
 
 .contact-form{
-max-width:500px;
+max-width:520px;
 margin:auto;
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:16px;
 }
 
 .contact-form input,
 .contact-form textarea{
-padding:12px;
+padding:13px;
 border:1px solid #ddd;
-border-radius:4px;
+border-radius:5px;
 font-size:15px;
 }
 
 .contact-form textarea{
 min-height:120px;
-resize:vertical;
 }
 
 .contact-form button{
 background:#e60000;
 color:white;
 border:none;
-padding:14px;
+padding:15px;
 font-size:16px;
 border-radius:4px;
 cursor:pointer;
@@ -187,8 +203,8 @@ background:#cc0000;
 footer{
 background:#111;
 color:white;
+padding:40px;
 text-align:center;
-padding:25px;
 font-size:14px;
 }
 
@@ -214,7 +230,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 header{
 flex-direction:column;
 align-items:flex-start;
-padding:15px 20px;
+padding:16px 20px;
 }
 
 nav{
@@ -228,18 +244,13 @@ font-size:14px;
 }
 
 .hero{
-height:420px;
+height:430px;
 padding-left:25px;
 padding-right:25px;
 }
 
-.hero-content{
-max-width:100%;
-}
-
 .hero h1{
 font-size:34px;
-line-height:1.25;
 }
 
 .hero p{
@@ -247,7 +258,7 @@ font-size:16px;
 }
 
 .section{
-padding:50px 25px;
+padding:60px 25px;
 }
 
 .services{
@@ -302,16 +313,19 @@ height:50px;
 <div class="services">
 
 <div class="service-card">
+<div class="service-icon">⚙️</div>
 <h3>Biomedical Equipment Service</h3>
 <p>Professional repair and servicing of biomedical equipment.</p>
 </div>
 
 <div class="service-card">
+<div class="service-icon">🛠</div>
 <h3>Preventive Maintenance</h3>
 <p>Scheduled preventive maintenance to ensure equipment reliability.</p>
 </div>
 
 <div class="service-card">
+<div class="service-icon">🔧</div>
 <h3>Technical Support</h3>
 <p>Engineering troubleshooting and technical consultation.</p>
 </div>
@@ -324,13 +338,13 @@ height:50px;
 
 <h2 class="section-title">About Kessa</h2>
 
-<p style="max-width:700px;margin:auto;text-align:center">
+<div class="about-text">
 
 Kessa Integrated Solution provides engineering and biomedical equipment services focused on reliability, safety and quality maintenance.
 
 We support healthcare facilities and technical environments with professional service and maintenance expertise.
 
-</p>
+</div>
 
 </div>
 
