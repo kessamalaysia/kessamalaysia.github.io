@@ -17,10 +17,10 @@
 
 <style>
 
- html{
+html{
 scroll-behavior:smooth;
 }
- 
+
 *{
 margin:0;
 padding:0;
@@ -92,9 +92,6 @@ text-shadow:0 4px 16px rgba(0,0,0,0.35);
 
 .hero p{
 font-size:21px;
-font-weight:400;
-line-height:1.5;
-letter-spacing:0.3px;
 margin-bottom:32px;
 opacity:0.95;
 }
@@ -106,15 +103,13 @@ padding:15px 32px;
 text-decoration:none;
 border-radius:6px;
 font-weight:500;
-letter-spacing:0.4px;
 box-shadow:0 6px 18px rgba(0,0,0,0.3);
-transition:all 0.25s ease;
+transition:0.25s;
 }
 
 .btn:hover{
 background:#cc0000;
 transform:translateY(-2px);
-box-shadow:0 10px 26px rgba(0,0,0,0.35);
 }
 
 /* SECTION */
@@ -158,11 +153,6 @@ margin-bottom:15px;
 color:#e60000;
 }
 
-.service-card h3{
-margin-bottom:12px;
-font-weight:500;
-}
-
 /* ABOUT */
 
 .about{
@@ -170,10 +160,37 @@ background:#f8f8f8;
 }
 
 .about-text{
-max-width:720px;
+max-width:850px;
 margin:auto;
 text-align:center;
 font-size:17px;
+line-height:1.8;
+color:#444;
+margin-bottom:60px;
+}
+
+.about-text p{
+margin-bottom:20px;
+}
+
+.about-gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.about-card img{
+width:100%;
+border-radius:8px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-card h4{
+margin-top:12px;
+font-weight:500;
+text-align:center;
 }
 
 /* CONTACT */
@@ -264,13 +281,8 @@ padding-left:25px;
 padding-right:25px;
 }
 
-.hero-content{
-max-width:100%;
-}
-
 .hero h1{
 font-size:36px;
-line-height:1.2;
 }
 
 .hero p{
@@ -360,15 +372,36 @@ height:50px;
 
 <div class="about-text">
 
-Kessa Integrated Solution is an integrated engineering and facility service provider built on more than a decade of industry experience in facility management and biomedical engineering services. The company is supported by professionals with extensive technical exposure across both government institutions and private sector organizations, particularly within healthcare facilities and critical infrastructure environments.
+<p>
+Kessa Integrated Solution is an integrated engineering and facility service provider built on extensive industry experience in biomedical engineering, technical maintenance and facility management.
+</p>
 
-With strong expertise in biomedical equipment management, planned preventive maintenance programs, technical support, and engineering services, Kessa Integrated Solution has developed a solid track record in supporting the operational reliability of medical equipment and facility systems. Our biomedical services are conducted in accordance with ISO 13485 quality management standards, SIRIM standards, and the guidelines established by the Malaysian Medical Device Authority (MDA).
+<p>
+Our professionals support healthcare facilities and infrastructure environments with reliable maintenance programs, engineering services and professional technical support.
+</p>
 
-As part of its continuous growth and service diversification, the company has expanded its capabilities into electrical engineering, power infrastructure services, solar photovoltaic (PV) system installation, and electric vehicle (EV) charging station installation.
+<p>
+With strong expertise in biomedical equipment management, preventive maintenance programs and technical troubleshooting, Kessa Integrated Solution ensures operational reliability and long-term equipment performance.
+</p>
 
-In addition, Kessa Integrated Solution also provides building cleaning and facility maintenance services, supporting organizations in maintaining safe, clean, and well-managed operational environments.
+</div>
 
-Driven by technical expertise and industry experience, Kessa Integrated Solution aims to deliver reliable, efficient, and professional engineering and facility support services to meet the evolving needs of modern infrastructure.
+<div class="about-gallery">
+
+<div class="about-card">
+<img src="biomedical.jpg">
+<h4>Biomedical Engineering</h4>
+</div>
+
+<div class="about-card">
+<img src="planning.jpg">
+<h4>Maintenance Planning</h4>
+</div>
+
+<div class="about-card">
+<img src="maintenance.jpg">
+<h4>Technical Maintenance</h4>
+</div>
 
 </div>
 
