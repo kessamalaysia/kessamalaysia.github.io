@@ -57,15 +57,26 @@ height:60px;
 }
 
 nav a{
-margin-left:35px;
 text-decoration:none;
-font-weight:500;
-color:#333;
-font-size:16px;
+font-weight:700;
+font-size:15px;
+color:white;
+position:relative;
 }
 
-nav a:hover{
-color:#e60000;
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#e60000;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 /* HERO */
