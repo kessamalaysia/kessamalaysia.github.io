@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Calibri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -28,7 +28,7 @@ scroll-behavior:smooth;
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Calibri',;
+font-family:'Roboto', sans-serif;
 }
 
 body{
@@ -43,9 +43,9 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 90px;
+padding:18px 80px;
 background:white;
-box-shadow:0 6px 22px rgba(0,0,0,0.08);
+box-shadow:0 4px 18px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
 z-index:1000;
@@ -53,11 +53,6 @@ z-index:1000;
 
 .logo img{
 height:60px;
-transition:0.3s;
-}
-
-.logo img:hover{
-transform:scale(1.05);
 }
 
 /* NAVIGATION */
@@ -69,20 +64,12 @@ gap:35px;
 
 nav a{
 text-decoration:none;
-font-weight:600;
-font-size:15px;
-color:#111;
+font-weight:700;
+font-size:16px;
+color:black;
 position:relative;
-letter-spacing:1px;
-text-transform:uppercase;
+letter-spacing:0.4px;
 padding-bottom:5px;
-transition:0.25s;
-}
-
-nav a:hover{
-color:#e60000;
-transform:translateY(-2px);
-text-shadow:0 2px 6px rgba(0,0,0,0.15);
 }
 
 /* HOVER LINE */
@@ -95,8 +82,7 @@ bottom:-6px;
 width:0%;
 height:2px;
 background:#e60000;
-transition:0.35s ease;
-box-shadow:0 2px 6px rgba(230,0,0,0.4);
+transition:0.3s ease;
 }
 
 nav a:hover::after{
@@ -129,7 +115,7 @@ letter-spacing:-0.6px;
 }
 
 .hero p{
-font-size:20px;
+font-size:21px;
 margin-bottom:32px;
 opacity:0.95;
 }
@@ -148,8 +134,7 @@ transition:0.3s;
 
 .btn:hover{
 background:#cc0000;
-transform:translateY(-2px);
-box-shadow:0 6px 18px rgba(0,0,0,0.25);
+font-weight:700;
 }
 
 /* SECTION */
@@ -186,8 +171,8 @@ transition:0.3s;
 }
 
 .service-card:hover{
-transform:translateY(-8px);
-box-shadow:0 16px 35px rgba(0,0,0,0.15);
+transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.12);
 }
 
 .service-icon{
@@ -210,7 +195,7 @@ color:#e60000;
 .service-card h3{
 margin-bottom:10px;
 font-size:20px;
-font-weight:600;
+font-weight:700;
 }
 
 .service-card p{
@@ -231,6 +216,7 @@ margin:auto;
 
 .about-text{
 text-align:justify;
+text-justify:inter-word;
 font-size:17px;
 line-height:1.9;
 color:#444;
@@ -293,7 +279,6 @@ padding:15px;
 font-size:16px;
 border-radius:4px;
 cursor:pointer;
-transition:0.3s;
 }
 
 .contact-form button:hover{
@@ -318,18 +303,11 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:14px 18px;
+padding:15px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:500;
-box-shadow:0 6px 15px rgba(0,0,0,0.2);
-display:flex;
-align-items:center;
-gap:8px;
-}
-
-.whatsapp:hover{
-transform:scale(1.05);
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* MOBILE */
@@ -413,7 +391,7 @@ height:50px;
 
 <div class="service-card">
 <div class="service-icon">
-<i class="fa-solid fa-salesperson"></i>
+<i class="fa-solid fa-gears"></i>
 </div>
 <h3>Biomedical Equipment Service</h3>
 <p>Professional repair and servicing of biomedical equipment.</p>
@@ -502,9 +480,7 @@ height:50px;
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/60123456789">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/">WhatsApp</a>
 
 </body>
 
