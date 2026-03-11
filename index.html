@@ -37,12 +37,12 @@ color:#333;
 line-height:1.6;
 }
 
-/* SCALE WRAPPER */
+/* SCALE 80% */
 
 .wrapper{
 transform:scale(0.8);
-transform-origin:top center;
-width:125%;
+transform-origin:top left;
+width:100%;
 }
 
 /* NAVBAR */
@@ -80,8 +80,6 @@ letter-spacing:0.4px;
 padding-bottom:5px;
 }
 
-/* HOVER LINE */
-
 nav a::after{
 content:"";
 position:absolute;
@@ -117,15 +115,12 @@ max-width:620px;
 .hero h1{
 font-size:56px;
 font-weight:700;
-line-height:1.15;
 margin-bottom:18px;
-letter-spacing:-0.6px;
 }
 
 .hero p{
 font-size:21px;
 margin-bottom:32px;
-opacity:0.95;
 }
 
 /* BUTTON */
@@ -142,7 +137,6 @@ transition:0.3s;
 
 .btn:hover{
 background:#cc0000;
-font-weight:700;
 }
 
 /* SECTION */
@@ -156,7 +150,6 @@ font-size:36px;
 font-weight:700;
 margin-bottom:45px;
 text-align:center;
-color:black;
 }
 
 /* SERVICES */
@@ -200,21 +193,39 @@ font-size:30px;
 color:#e60000;
 }
 
-.service-card h3{
-margin-bottom:10px;
-font-size:20px;
-font-weight:700;
+/* BRAND SECTION */
+
+.brands{
+background:#f8f8f8;
 }
 
-.service-card p{
-font-size:15px;
-color:#666;
+.brand-logos{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:40px;
+align-items:center;
+justify-items:center;
+}
+
+.brand-logos img{
+height:50px;
+filter:grayscale(100%);
+opacity:0.7;
+transition:0.3s;
+}
+
+.brand-logos img:hover{
+filter:none;
+opacity:1;
+transform:scale(1.1);
 }
 
 /* ABOUT */
 
 .about{
-background:#f8f8f8;
+background:#ffffff;
 }
 
 .about-container{
@@ -224,10 +235,8 @@ margin:auto;
 
 .about-text{
 text-align:justify;
-text-justify:inter-word;
 font-size:17px;
 line-height:1.9;
-color:#444;
 }
 
 .about-text p{
@@ -250,11 +259,6 @@ height:220px;
 object-fit:cover;
 border-radius:8px;
 box-shadow:0 8px 20px rgba(0,0,0,0.15);
-transition:0.3s;
-}
-
-.about-card img:hover{
-transform:scale(1.05);
 }
 
 /* CONTACT */
@@ -272,7 +276,6 @@ gap:16px;
 padding:13px;
 border:1px solid #ddd;
 border-radius:5px;
-font-size:15px;
 }
 
 .contact-form textarea{
@@ -284,7 +287,6 @@ background:#e60000;
 color:white;
 border:none;
 padding:15px;
-font-size:16px;
 border-radius:4px;
 cursor:pointer;
 }
@@ -301,59 +303,6 @@ color:white;
 padding:40px;
 text-align:center;
 font-size:14px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:500;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* MOBILE */
-
-@media (max-width:768px){
-
-header{
-flex-direction:column;
-align-items:flex-start;
-padding:16px 20px;
-}
-
-nav{
-margin-top:10px;
-gap:18px;
-}
-
-.hero{
-height:420px;
-padding:25px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-.section{
-padding:60px 20px;
-}
-
-.logo img{
-height:50px;
-}
-
 }
 
 </style>
@@ -404,15 +353,15 @@ height:50px;
 <i class="fa-solid fa-bolt"></i>
 </div>
 <h3>Electrical Engineering & Installation</h3>
-<p>Professional electrical wiring, electrical equipment installation, and system integration for residential and commercial premises.</p>
+<p>Professional electrical wiring and equipment installation for residential and commercial premises.</p>
 </div>
 
 <div class="service-card">
 <div class="service-icon">
 <i class="fa-solid fa-solar-panel"></i>
 </div>
-<h3>Solar Energy Consultation & Energy Management</h3>
-<p>Consultation for solar photovoltaic (PV) systems and energy audit services to help organizations improve energy efficiency and optimize energy consumption.</p>
+<h3>Solar Energy Consultation</h3>
+<p>Consultation for solar photovoltaic systems and energy management solutions.</p>
 </div>
 
 <div class="service-card">
@@ -420,8 +369,36 @@ height:50px;
 <i class="fa-solid fa-stethoscope"></i>
 </div>
 <h3>Biomedical Engineering Support</h3>
-<p>Providing biomedical equipment asset management, preventive maintenance scheduling, and corrective maintenance support aligned with ISO 13485 and SIRIM guidelines.</p>
+<p>Medical equipment maintenance, asset management and preventive maintenance services.</p>
 </div>
+
+</div>
+
+</div>
+
+<!-- BRAND LOGO SECTION -->
+
+<div class="section brands">
+
+<h2 class="section-title">Technologies & Brands We Support</h2>
+
+<div class="brand-logos">
+
+<img src="ge.png">
+<img src="draeger.png">
+<img src="philips.png">
+<img src="siemens.png">
+<img src="mindray.png">
+
+<img src="schneider.png">
+<img src="abb.png">
+<img src="legrand.png">
+<img src="hager.png">
+
+<img src="huawei.png">
+<img src="growatt.png">
+<img src="longi.png">
+<img src="sma.png">
 
 </div>
 
@@ -437,30 +414,10 @@ height:50px;
 
 <p>Kessa Integrated Solution is an integrated engineering service provider delivering solutions in electrical engineering, renewable energy consultation, energy management, and biomedical engineering support.</p>
 
-<p>The company provides electrical wiring works, installation of electrical equipment, and consultation for solar photovoltaic (PV) systems for residential and commercial premises.</p>
+<p>The company provides electrical wiring works, installation of electrical equipment, and consultation for solar photovoltaic systems for residential and commercial premises.</p>
 
 <p>KESSA also provides energy management and energy audit services to help facilities improve energy efficiency and optimize operational costs.</p>
 
-<p>In the healthcare sector, KESSA specializes in biomedical and low voltage equipment support with more than 10 years of technical experience in medical equipment asset management, preventive maintenance scheduling, and breakdown management for clinics and hospitals.</p>
-
-<p>Biomedical services are performed in accordance with ISO 13485 quality management principles and SIRIM regulatory guidelines.</p>
-
-</div>
-
-</div>
-
-<div class="about-gallery">
-
-<div class="about-card">
-<img src="biomed.png">
-</div>
-
-<div class="about-card">
-<img src="planppm.png">
-</div>
-
-<div class="about-card">
-<img src="casmen.png">
 </div>
 
 </div>
@@ -495,10 +452,6 @@ height:50px;
 </footer>
 
 </div>
-
-<a class="whatsapp" href="https://wa.me/60123456789">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp
-</a>
 
 </body>
 </html>
