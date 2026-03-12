@@ -65,7 +65,7 @@ gap:35px;
 nav a{
 text-decoration:none;
 font-weight:700;
-font-size:16px;
+font-size:12.8px; /* 80% dari 16px */
 color:black;
 position:relative;
 letter-spacing:0.4px;
@@ -111,13 +111,11 @@ font-size:56px;
 font-weight:700;
 line-height:1.15;
 margin-bottom:18px;
-letter-spacing:-0.6px;
 }
 
 .hero p{
 font-size:21px;
 margin-bottom:32px;
-opacity:0.95;
 }
 
 /* BUTTON */
@@ -134,7 +132,6 @@ transition:0.3s;
 
 .btn:hover{
 background:#cc0000;
-font-weight:700;
 }
 
 /* SECTION */
@@ -148,7 +145,6 @@ font-size:36px;
 font-weight:700;
 margin-bottom:45px;
 text-align:center;
-color:black;
 }
 
 /* SERVICES */
@@ -192,15 +188,33 @@ font-size:30px;
 color:#e60000;
 }
 
-.service-card h3{
-margin-bottom:10px;
-font-size:20px;
-font-weight:700;
+/* LOGO SLIDER */
+
+.logo-slider{
+overflow:hidden;
+background:#f8f8f8;
+padding:40px 0;
+margin-top:40px;
 }
 
-.service-card p{
-font-size:15px;
-color:#666;
+.logo-track{
+display:flex;
+width:calc(200px * 14);
+animation:scroll 30s linear infinite;
+}
+
+.logo-track img{
+height:50px;
+margin:0 40px;
+}
+
+@keyframes scroll{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
 }
 
 /* ABOUT */
@@ -216,7 +230,6 @@ margin:auto;
 
 .about-text{
 text-align:justify;
-text-justify:inter-word;
 font-size:17px;
 line-height:1.9;
 color:#444;
@@ -242,11 +255,6 @@ height:220px;
 object-fit:cover;
 border-radius:8px;
 box-shadow:0 8px 20px rgba(0,0,0,0.15);
-transition:0.3s;
-}
-
-.about-card img:hover{
-transform:scale(1.05);
 }
 
 /* CONTACT */
@@ -293,59 +301,6 @@ color:white;
 padding:40px;
 text-align:center;
 font-size:14px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:500;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* MOBILE */
-
-@media (max-width:768px){
-
-header{
-flex-direction:column;
-align-items:flex-start;
-padding:16px 20px;
-}
-
-nav{
-margin-top:10px;
-gap:18px;
-}
-
-.hero{
-height:420px;
-padding:25px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-.section{
-padding:60px 20px;
-}
-
-.logo img{
-height:50px;
-}
-
 }
 
 </style>
@@ -419,6 +374,47 @@ height:50px;
 </div>
 
 
+<!-- LOGO AUTO SLIDER -->
+
+<div class="logo-slider">
+
+<div class="logo-track">
+
+<img src="ge.png">
+<img src="draeger.png">
+<img src="philips.png">
+<img src="siemens.png">
+<img src="mindray.png">
+<img src="schneider.png">
+<img src="abb.png">
+<img src="legrand.png">
+<img src="hager.png">
+<img src="huawei.png">
+<img src="growatt.png">
+<img src="longi.png">
+<img src="sma.png">
+
+<!-- repeat for smooth scroll -->
+
+<img src="ge.png">
+<img src="draeger.png">
+<img src="philips.png">
+<img src="siemens.png">
+<img src="mindray.png">
+<img src="schneider.png">
+<img src="abb.png">
+<img src="legrand.png">
+<img src="hager.png">
+<img src="huawei.png">
+<img src="growatt.png">
+<img src="longi.png">
+<img src="sma.png">
+
+</div>
+
+</div>
+
+
 <div class="section about" id="about">
 
 <h2 class="section-title">About Kessa Integrated Solution</h2>
@@ -437,22 +433,6 @@ height:50px;
 
 <p>Biomedical services are performed in accordance with ISO 13485 quality management principles and SIRIM regulatory guidelines, with experience supporting government hospitals and healthcare facilities.</p>
 
-</div>
-
-</div>
-
-<div class="about-gallery">
-
-<div class="about-card">
-<img src="biomed.png">
-</div>
-
-<div class="about-card">
-<img src="planppm.png">
-</div>
-
-<div class="about-card">
-<img src="casmen.png">
 </div>
 
 </div>
@@ -486,10 +466,6 @@ height:50px;
 | Registration No.: 202603054901 (003828573-D)
 
 </footer>
-
-<a class="whatsapp" href="https://wa.me/60123456789">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp
-</a>
 
 </body>
 
