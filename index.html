@@ -65,14 +65,12 @@ gap:35px;
 nav a{
 text-decoration:none;
 font-weight:700;
-font-size:12.8px; /* 80% dari 16px */
+font-size:12.8px;
 color:black;
 position:relative;
 letter-spacing:0.4px;
 padding-bottom:5px;
 }
-
-/* HOVER LINE */
 
 nav a::after{
 content:"";
@@ -108,8 +106,6 @@ max-width:620px;
 
 .hero h1{
 font-size:56px;
-font-weight:700;
-line-height:1.15;
 margin-bottom:18px;
 }
 
@@ -126,12 +122,6 @@ color:white;
 padding:15px 32px;
 text-decoration:none;
 border-radius:6px;
-font-weight:500;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#cc0000;
 }
 
 /* SECTION */
@@ -142,7 +132,6 @@ padding:90px 20px;
 
 .section-title{
 font-size:36px;
-font-weight:700;
 margin-bottom:45px;
 text-align:center;
 }
@@ -199,22 +188,27 @@ margin-top:40px;
 
 .logo-track{
 display:flex;
-width:calc(200px * 14);
+width:calc(200px * 26);
 animation:scroll 30s linear infinite;
 }
 
 .logo-track img{
-height:50px;
+height:60px;
 margin:0 40px;
+transition:0.3s;
+}
+
+.logo-track img:hover{
+transform:scale(1.1);
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
+border-radius:6px;
+background:white;
+padding:6px;
 }
 
 @keyframes scroll{
-0%{
-transform:translateX(0);
-}
-100%{
-transform:translateX(-50%);
-}
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
 }
 
 /* ABOUT */
@@ -232,7 +226,6 @@ margin:auto;
 text-align:justify;
 font-size:17px;
 line-height:1.9;
-color:#444;
 }
 
 .about-text p{
@@ -255,6 +248,11 @@ height:220px;
 object-fit:cover;
 border-radius:8px;
 box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.about-card img:hover{
+transform:scale(1.05);
 }
 
 /* CONTACT */
@@ -272,7 +270,6 @@ gap:16px;
 padding:13px;
 border:1px solid #ddd;
 border-radius:5px;
-font-size:15px;
 }
 
 .contact-form textarea{
@@ -284,13 +281,7 @@ background:#e60000;
 color:white;
 border:none;
 padding:15px;
-font-size:16px;
 border-radius:4px;
-cursor:pointer;
-}
-
-.contact-form button:hover{
-background:#cc0000;
 }
 
 /* FOOTER */
@@ -358,7 +349,7 @@ font-size:14px;
 <i class="fa-solid fa-solar-panel"></i>
 </div>
 <h3>Solar Energy Consultation & Energy Management</h3>
-<p>Consultation for solar photovoltaic (PV) systems and energy audit services to help organizations improve energy efficiency and optimize energy consumption.</p>
+<p>Consultation for solar photovoltaic (PV) systems and energy audit services.</p>
 </div>
 
 <div class="service-card">
@@ -366,15 +357,13 @@ font-size:14px;
 <i class="fa-solid fa-stethoscope"></i>
 </div>
 <h3>Biomedical Engineering Support</h3>
-<p>Providing biomedical equipment asset management, preventive maintenance scheduling, and corrective maintenance support aligned with ISO 13485 and SIRIM guidelines.</p>
+<p>Providing biomedical equipment asset management and preventive maintenance services.</p>
 </div>
 
 </div>
 
 </div>
 
-
-<!-- LOGO AUTO SLIDER -->
 
 <div class="logo-slider">
 
@@ -393,8 +382,6 @@ font-size:14px;
 <img src="growatt.png">
 <img src="longi.png">
 <img src="sma.png">
-
-<!-- repeat for smooth scroll -->
 
 <img src="ge.png">
 <img src="draeger.png">
@@ -425,14 +412,24 @@ font-size:14px;
 
 <p>Kessa Integrated Solution is an integrated engineering service provider delivering solutions in electrical engineering, renewable energy consultation, energy management, and biomedical engineering support.</p>
 
-<p>The company provides electrical wiring works, installation of electrical equipment, and consultation for solar photovoltaic (PV) systems for residential and commercial premises.</p>
+<p>The company provides electrical wiring works, installation of electrical equipment, and consultation for solar photovoltaic systems.</p>
 
-<p>KESSA also provides energy management and energy audit services to help facilities improve energy efficiency and optimize operational costs.</p>
+</div>
 
-<p>In the healthcare sector, KESSA specializes in biomedical and low voltage equipment support with more than 10 years of technical experience in medical equipment asset management, preventive maintenance scheduling, and breakdown management for clinics and hospitals.</p>
+</div>
 
-<p>Biomedical services are performed in accordance with ISO 13485 quality management principles and SIRIM regulatory guidelines, with experience supporting government hospitals and healthcare facilities.</p>
+<div class="about-gallery">
 
+<div class="about-card">
+<img src="biomed.png">
+</div>
+
+<div class="about-card">
+<img src="planppm.png">
+</div>
+
+<div class="about-card">
+<img src="casmen.png">
 </div>
 
 </div>
@@ -447,9 +444,7 @@ font-size:14px;
 <form action="https://formspree.io/f/xjgavnly" method="POST" class="contact-form">
 
 <input type="text" name="name" placeholder="Your Name" required>
-
 <input type="email" name="email" placeholder="Your Email" required>
-
 <input type="tel" name="phone" placeholder="Phone Number">
 
 <textarea name="message" placeholder="Your Message"></textarea>
@@ -468,5 +463,4 @@ font-size:14px;
 </footer>
 
 </body>
-
 </html>
