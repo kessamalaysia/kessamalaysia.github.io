@@ -1,5 +1,6 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
@@ -12,155 +13,277 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+html{
+scroll-behavior:smooth;
+}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Roboto', sans-serif;
 }
 
 body{
-background:#f5f5f5;
+background:#ffffff;
 color:#333;
-overflow-x:hidden;
+line-height:1.6;
 }
 
 /* NAVBAR */
 
-nav{
+header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
+padding:18px 80px;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+box-shadow:0 4px 18px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.logo{
+.logo img{
+height:60px;
+}
+
+/* NAVIGATION */
+
+nav{
 display:flex;
-align-items:center;
-font-size:24px;
-font-weight:700;
-color:#e60000;
+gap:35px;
 }
 
-.logo span{
-color:black;
-margin-left:8px;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:30px;
-}
-
-nav ul li a{
+nav a{
 text-decoration:none;
-color:#333;
-font-weight:500;
-transition:0.3s;
+font-weight:700;
+font-size:16px;
+color:black;
+position:relative;
+letter-spacing:0.4px;
+padding-bottom:5px;
 }
 
-nav ul li a:hover{
-color:#e60000;
+/* HOVER LINE */
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#e60000;
+transition:0.3s ease;
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 /* HERO */
 
 .hero{
-height:75vh;
-background:url('hero.jpg') center/cover no-repeat;
+height:560px;
+background:
+linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.2) 100%),
+url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc") center/cover;
 display:flex;
 align-items:center;
-padding:0 8%;
+padding-left:90px;
 color:white;
-position:relative;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.45);
 }
 
 .hero-content{
-position:relative;
-max-width:600px;
+max-width:620px;
 }
 
 .hero h1{
 font-size:56px;
-margin-bottom:15px;
-line-height:1.1;
+font-weight:700;
+line-height:1.15;
+margin-bottom:18px;
+letter-spacing:-0.6px;
 }
 
 .hero p{
-font-size:18px;
-margin-bottom:30px;
+font-size:21px;
+margin-bottom:32px;
+opacity:0.95;
 }
 
+/* BUTTON */
+
 .btn{
-display:inline-block;
 background:#e60000;
 color:white;
-padding:12px 28px;
-border-radius:6px;
+padding:15px 32px;
 text-decoration:none;
+border-radius:6px;
 font-weight:500;
 transition:0.3s;
 }
 
 .btn:hover{
-background:#c40000;
+background:#cc0000;
+font-weight:700;
+}
+
+/* SECTION */
+
+.section{
+padding:90px 20px;
+}
+
+.section-title{
+font-size:36px;
+font-weight:700;
+margin-bottom:45px;
+text-align:center;
+color:black;
 }
 
 /* SERVICES */
 
 .services{
-padding:80px 8%;
-text-align:center;
-}
-
-.services h2{
-font-size:36px;
-margin-bottom:50px;
-}
-
-.services-grid{
+max-width:1100px;
+margin:auto;
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
 }
 
 .service-card{
 background:white;
-padding:35px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+padding:40px 30px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+text-align:center;
 transition:0.3s;
 }
 
 .service-card:hover{
 transform:translateY(-6px);
+box-shadow:0 14px 30px rgba(0,0,0,0.12);
 }
 
-.icon{
-font-size:36px;
-margin-bottom:15px;
+.service-icon{
+width:70px;
+height:70px;
+background:#ffe5e5;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+margin-bottom:20px;
+}
+
+.service-icon i{
+font-size:30px;
 color:#e60000;
 }
 
 .service-card h3{
 margin-bottom:10px;
+font-size:20px;
+font-weight:700;
+}
+
+.service-card p{
+font-size:15px;
+color:#666;
+}
+
+/* ABOUT */
+
+.about{
+background:#f8f8f8;
+}
+
+.about-container{
+max-width:900px;
+margin:auto;
+}
+
+.about-text{
+text-align:justify;
+text-justify:inter-word;
+font-size:17px;
+line-height:1.9;
+color:#444;
+}
+
+.about-text p{
+margin-bottom:20px;
+}
+
+/* IMAGE GALLERY */
+
+.about-gallery{
+max-width:1100px;
+margin:60px auto 0;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.about-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.about-card img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact-form{
+max-width:520px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:13px;
+border:1px solid #ddd;
+border-radius:5px;
+font-size:15px;
+}
+
+.contact-form textarea{
+min-height:120px;
+}
+
+.contact-form button{
+background:#e60000;
+color:white;
+border:none;
+padding:15px;
+font-size:16px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.contact-form button:hover{
+background:#cc0000;
 }
 
 /* FOOTER */
@@ -168,62 +291,60 @@ margin-bottom:10px;
 footer{
 background:#111;
 color:white;
+padding:40px;
 text-align:center;
-padding:25px;
-margin-top:50px;
+font-size:14px;
 }
 
-/* TABLET */
+/* WHATSAPP */
 
-@media(max-width:1000px){
-
-.hero h1{
-font-size:42px;
-}
-
-.services-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:500;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-nav{
+header{
 flex-direction:column;
-gap:10px;
+align-items:flex-start;
+padding:16px 20px;
 }
 
-nav ul{
+nav{
+margin-top:10px;
 gap:18px;
 }
 
 .hero{
-height:65vh;
-text-align:center;
-justify-content:center;
-}
-
-.hero-content{
-max-width:90%;
+height:420px;
+padding:25px;
 }
 
 .hero h1{
-font-size:32px;
+font-size:34px;
 }
 
 .hero p{
-font-size:16px;
+font-size:17px;
 }
 
-.services{
-padding:60px 6%;
+.section{
+padding:60px 20px;
 }
 
-.services-grid{
-grid-template-columns:1fr;
+.logo img{
+height:50px;
 }
 
 }
@@ -234,86 +355,144 @@ grid-template-columns:1fr;
 
 <body>
 
-<!-- NAVBAR -->
-
-<nav>
+<header>
 
 <div class="logo">
-K <span>KESSA</span>
+<img src="logo.png">
 </div>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-
+<nav>
+<a href="#">HOME</a>
+<a href="#services">SERVICES</a>
+<a href="#about">ABOUT</a>
+<a href="#contact">CONTACT</a>
 </nav>
 
-<!-- HERO -->
+</header>
 
-<section class="hero">
+<div class="hero">
 
 <div class="hero-content">
 
 <h1>Kessa Integrated Solution</h1>
 
-<p>Beyond Engineering, Driving Smart Solutions.</p>
+<p>Beyond Engineering, Driving Smart Solutions</p>
 
-<a href="#" class="btn">Contact Us</a>
+<a class="btn" href="#contact">Contact Us</a>
 
 </div>
 
-</section>
+</div>
 
-<!-- SERVICES -->
 
-<section class="services">
+<div class="section" id="services">
 
-<h2>Our Core Services</h2>
+<h2 class="section-title">Our Core Services</h2>
 
-<div class="services-grid">
+<div class="services">
 
 <div class="service-card">
-
-<div class="icon">⚡</div>
-
+<div class="service-icon">
+<i class="fa-solid fa-bolt"></i>
+</div>
 <h3>Electrical Engineering & Installation</h3>
-
-<p>Professional electrical wiring and equipment installation for residential and commercial premises.</p>
-
+<p>Professional electrical wiring, electrical equipment installation, and system integration for residential and commercial premises.</p>
 </div>
 
 <div class="service-card">
-
-<div class="icon">☀</div>
-
-<h3>Solar Energy Consultation</h3>
-
-<p>Consultation for solar photovoltaic systems and energy management solutions.</p>
-
+<div class="service-icon">
+<i class="fa-solid fa-solar-panel"></i>
+</div>
+<h3>Solar Energy Consultation & Energy Management</h3>
+<p>Consultation for solar photovoltaic (PV) systems and energy audit services to help organizations improve energy efficiency and optimize energy consumption.</p>
 </div>
 
 <div class="service-card">
+<div class="service-icon">
+<i class="fa-solid fa-stethoscope"></i>
+</div>
+<h3>Biomedical Engineering Support</h3>
+<p>Providing biomedical equipment asset management, preventive maintenance scheduling, and corrective maintenance support aligned with ISO 13485 and SIRIM guidelines.</p>
+</div>
 
-<div class="icon">🔧</div>
+</div>
 
-<h3>Technical Support & Maintenance</h3>
+</div>
 
-<p>24/7 technical support and preventive maintenance for engineering systems.</p>
+
+<div class="section about" id="about">
+
+<h2 class="section-title">About Kessa Integrated Solution</h2>
+
+<div class="about-container">
+
+<div class="about-text">
+
+<p>Kessa Integrated Solution is an integrated engineering service provider delivering solutions in electrical engineering, renewable energy consultation, energy management, and biomedical engineering support.</p>
+
+<p>The company provides electrical wiring works, installation of electrical equipment, and consultation for solar photovoltaic (PV) systems for residential and commercial premises.</p>
+
+<p>KESSA also provides energy management and energy audit services to help facilities improve energy efficiency and optimize operational costs.</p>
+
+<p>In the healthcare sector, KESSA specializes in biomedical and low voltage equipment support with more than 10 years of technical experience in medical equipment asset management, preventive maintenance scheduling, and breakdown management for clinics and hospitals.</p>
+
+<p>Biomedical services are performed in accordance with ISO 13485 quality management principles and SIRIM regulatory guidelines, with experience supporting government hospitals and healthcare facilities.</p>
 
 </div>
 
 </div>
 
-</section>
+<div class="about-gallery">
+
+<div class="about-card">
+<img src="biomed.png">
+</div>
+
+<div class="about-card">
+<img src="planppm.png">
+</div>
+
+<div class="about-card">
+<img src="casmen.png">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="section" id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<form action="https://formspree.io/f/xjgavnly" method="POST" class="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="message" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
 
 <footer>
 
-© 2026 Kessa Integrated Solution. All Rights Reserved.
+© 2026 Kessa Integrated Solution  
+| Registration No.: 202603054901 (003828573-D)
 
 </footer>
 
+<a class="whatsapp" href="https://wa.me/60123456789">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
 </body>
+
 </html>
+```
